@@ -88,11 +88,7 @@ export default class Header extends React.Component {
 			mobileMenuIsActive: false
 		});
 
-		if (
-			this.props.state.cart &&
-			this.props.state.cart.items &&
-			this.props.state.cart.items.length > 0
-		) {
+		if (this.props.state.cart && this.props.state.cart.items && this.props.state.cart.items.length > 0) {
 			this.props.cartLayerInitialized({
 				cartlayerBtnInitialized: true
 			});
@@ -114,26 +110,22 @@ export default class Header extends React.Component {
 			this.props.loggedinUserTimeUp({
 				authenticated: false
 			});
-			this.setState({
-				customerProperties: null
-			});
 			this.props.setLocation('/login');
 		} else {
 			this.props.customerData({
 				token: Lscache.get('auth_data')
 			});
-			this.setState({
-				customerProperties: Lscache.get('customer_data')
-			});
 			this.props.setLocation('/customer-account');
 		}
-	};
+	}
 
 	handleSearch = search => {
 		if (this.props.state.currentPage.path === '/search') {
 			this.props.setSearch(search);
-		} else if (search && search !== '') {
-			this.props.setLocation(`/search?search=${search}`);
+		} else {
+			if (search && search !== '') {
+				this.props.setLocation('/search?search=' + search);
+			}
 		}
 	};
 
@@ -158,8 +150,6 @@ export default class Header extends React.Component {
 			: 'navbar-burger is-hidden-tablet';
 		const showBackButton =
 			currentPage.type === 'product' && location.hasHistory;
-
-		const customerProperties = Lscache.get('customer_data');
 
 		return (
 			<Fragment>
@@ -202,7 +192,6 @@ export default class Header extends React.Component {
 									}
 								/>
 								<Login
-									customerProperties={customerProperties}
 									onClick={this.handleLogin}
 								/>
 								<CartIndicator
@@ -244,12 +233,13 @@ export default class Header extends React.Component {
 					onClick={this.closeAll}
 				/>
 				<div
-					className={`mobile-nav is-hidden-tablet${
-						this.state.mobileMenuIsActive ? ' mobile-nav-open' : ''
-					}`}
+					className={
+						'mobile-nav is-hidden-tablet' +
+						(this.state.mobileMenuIsActive ? ' mobile-nav-open' : '')
+					}
 				>
 					<HeadMenu
-						isMobile
+						isMobile={true}
 						categories={categories}
 						location={location}
 						onClick={this.menuClose}
