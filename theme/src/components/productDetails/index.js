@@ -191,7 +191,6 @@ export default class ProductDetails extends React.Component {
 							limit={themeSettings.limit_viewed_products || 4}
 						/>
 					)}
-
 				</Fragment>
 			);
 		}
