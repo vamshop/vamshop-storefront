@@ -1,7 +1,7 @@
 // config used by store server side only
 module.exports = {
 	// store UI language
-	language: process.env.LANGUAGE || 'en',
+	language: process.env.LANGUAGE || 'ru',
 	// used by Store (server side)
 	ajaxBaseUrl: process.env.AJAX_BASE_URL || 'http://localhost:3001/ajax',
 	// used by Store (server side)
