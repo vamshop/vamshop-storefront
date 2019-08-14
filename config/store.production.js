@@ -1,7 +1,9 @@
+process.env.LANGUAGE = "ru";﻿
+
 // config used by store client side only
 module.exports = {
 	// store UI language
-	language: process.env.LANGUAGE || 'ru',
+	language: process.env.LANGUAGE || 'en',
 
 	// used by Store (server side)
 	apiBaseUrl: process.env.API_BASE_URL || 'http://localhost:3001/api/v1',
