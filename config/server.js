@@ -1,5 +1,3 @@
-process.env.LANGUAGE = "ru";﻿
-
 // config used by store server side only
 module.exports = {
 	// store UI language
