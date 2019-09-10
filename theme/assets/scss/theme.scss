@@ -1,5 +1,23 @@
 @import "~bulma/sass/utilities/initial-variables";
 
+/* ======== Find Below Table of Content Points to Go Relevant Section  =========
+[Table of contents]
+SCSS Variables
+Base CSS
+Home Slider CSS
+Checkout CSS
+Cart CSS
+Header CSS
+Footer CSS
+Category CSS
+Product CSS
+Page CSS
+Customer Account CSS
+Login Page CSS
+Account Page CSS
+===============================================================================*/
+
+/* ================== SCSS Variables  ================== */
 $green: #00b366;
 $login: #116363;
 $registry: orange;
@@ -14,6 +32,8 @@ $breadcrumb-item-color: #7a7a7a;
 $breadcrumb-item-separator-color: #7a7a7a;
 
 $error-alert-text: #e5443e;
+
+/* ================== Base CSS  ================== */
 
 @import "~bulma";
 @import "~rc-slider/assets/index.css";
@@ -118,14 +138,25 @@ MOBILE
   }
 }
 
+/* ================== Home Slider CSS  ================== */
 @import "homeSlider.scss";
+/* ================== Checkout CSS  ================== */
 @import "checkout.scss";
+/* ================== Cart CSS  ================== */
 @import "cart.scss";
+/* ================== Header CSS  ================== */
 @import "header.scss";
+/* ================== Footer CSS  ================== */
 @import "footer.scss";
+/* ================== Category CSS  ================== */
 @import "category.scss";
+/* ================== Product CSS  ================== */
 @import "product.scss";
+/* ================== Page CSS  ================== */
 @import "page.scss";
+/* ================== Custom CSS  ================== */
 @import "custom.scss";
+/* ================== Login Page CSS  ================== */
 @import "login.scss";
+/* ================== Account CSS  ================== */
 @import "account.scss";
