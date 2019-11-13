@@ -116,7 +116,7 @@
     "stripe": "^6.36.0",
     "theme": "file:theme",
     "ua-parser-js": "^0.7.20",
-    "vamshop-client": "^0.35.0",
+    "vamshop-client": "^0.36.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
     "winston": "^3.0.0",
