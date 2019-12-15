@@ -19,19 +19,19 @@ server {
         expires 1y;
         access_log off;
         log_not_found off;
-        root /var/www/vamshop-api/public/content;
+        root /var/www/vamshop-storefront/public/content;
 
 
         location /assets/ {
-                alias /var/www/vamshop-api/theme/assets/;
+                alias /var/www/vamshop-storefront/theme/assets/;
         }
 
         location /sw.js {
-                root /var/www/vamshop-api/public/;
+                root /var/www/vamshop-storefront/public/;
         }
 
         location /sw-toolbox.js {
-                root /var/www/vamshop-api/public/;
+                root /var/www/vamshop-storefront/public/;
         }
 
         location / {
