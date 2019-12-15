@@ -21,11 +21,11 @@ RUN echo "deb http://nginx.org/packages/debian/ ${NGINX_CODENAME} nginx" >> /etc
 RUN npm install pm2 -g
 
 
-RUN mkdir -p /var/www/cezerin2-store 
+RUN mkdir -p /var/www/vamshop-storefront 
 
-WORKDIR /var/www/cezerin2-store 
+WORKDIR /var/www/vamshop-storefront 
 
-COPY . /var/www/cezerin2-store 
+COPY . /var/www/vamshop-storefront 
 
 # Nginx config
 COPY nginx/nginx.conf /etc/nginx/
@@ -36,7 +36,7 @@ COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x "/usr/local/bin/docker-entrypoint.sh"
 
 # build project
-RUN cd /var/www/cezerin2-store \
+RUN cd /var/www/vamshop-storefront \
 	&& npm install \
 	&& npm run build
 

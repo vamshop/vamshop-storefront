@@ -19,19 +19,19 @@ server {
         expires 1y;
         access_log off;
         log_not_found off;
-        root /var/www/cezerin/public/content;
+        root /var/www/vamshop-api/public/content;
 
 
         location /assets/ {
-                alias /var/www/cezerin/theme/assets/;
+                alias /var/www/vamshop-api/theme/assets/;
         }
 
         location /sw.js {
-                root /var/www/cezerin/public/;
+                root /var/www/vamshop-api/public/;
         }
 
         location /sw-toolbox.js {
-                root /var/www/cezerin/public/;
+                root /var/www/vamshop-api/public/;
         }
 
         location / {
