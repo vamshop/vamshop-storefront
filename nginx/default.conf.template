@@ -23,7 +23,7 @@ server {
 
 
         location /assets/ {
-                alias /var/www/vamshop-storefront/theme/assets/;
+                alias /var/www/vamshop-api/public/content/assets/;
         }
 
         location /sw.js {

@@ -48,11 +48,11 @@ server {
         }
 
         location /assets/ {
-                alias /var/www/cezerin/theme/assets/;
+                alias /var/www/cezerin2/public/content/assets/;
         }
 
         location /sw.js {
-                root /var/www/cezerin/theme/assets/;
+                root /var/www/cezerin2-store/theme/assets/;
         }
 
         location ~ ^/(api|ajax|ws|images)/ {
