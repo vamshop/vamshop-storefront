@@ -115,7 +115,7 @@
     "slug": "^0.9.1",
     "stripe": "^6.36.0",
     "theme": "file:theme",
-    "ua-parser-js": "^0.7.20",
+    "ua-parser-js": "^0.7.24",
     "vamshop-client": "^0.36.0",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.8",
